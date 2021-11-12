@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet1.css"/>
+    <style>
+        p {
+            text-decoration: line-through;
+        }
+        #title2 {
+            text-decoration: underline;
+        }
+        .font_itatic {
+            font-style: italic;
+        }
+
+        a {
+            color: red;
+        }
+
+        div a {
+            text-decoration:none;
+            color:blue;
+        }
+
+        #node1_1 > p {
+            font-weight: bold;
+            color:orange;
+        }
+        #node1_1 + p {
+            text-decoration: line-through;
+            color:green;
+        }
+        #node1_1 ~ p {
+            font-style:italic;
+            color:navy;
+        }
+
+        a[title] {
+            color:red;
+            text-decoration:line-through;
+        }
+
+        a[title="内部链接"]{
+            color:red;
+            text-decoration:line-through;
+        }
+
+        a[class~="bold"] {
+            font-weight: bold;
+        }
+        a[class~="italic"]{
+            font-style:italic;
+        }
+
+        p input:focus{
+            border:3px solid steelblue;
+        }
+
+        div:target{
+            font-size:2em;
+            font-weight:bold;
+        }
+
+        div > :first-child {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>段落一</p>
+        <p>段落二</p>
+        <span>文本内容</span>
+    </div>
+    <h1>标题一</h1>
+    <h1>标题二</h1>
+    <p>言入黄花川，每逐清溪水。随山将万转，趣途无百里。</p>
+    <p id="title2">声喧乱石中，色静深松里。漾漾泛菱荇，澄澄映葭苇。</p>
+    <p class="font_itatic">我心素已闲，清川澹如此。请留磐石上，垂钓将已矣。</p>
+    <a href="">链接一</a>
+    <div><a href="">链接二</a></div>
+    <div><p><a href="">链接三</a></p></div>
+    <div id="node1_1">
+        <p>段落一</p>
+        <div><p>段落二</p></div>
+    </div>
+    <p>段落三</p>
+    <p>段落四</p>
+    <p>段落五</p>
+    <a href="" title="外部链接">链接一</a>
+    <a href="" title="内部链接">链接二</a>
+    <a href="">链接三</a>
+    <a href="" class="underline bold">链接一</a>
+    <a href="" class="bold italic">链接二</a>
+    <a href="">链接三</a>
+    <p><label>用户名</label><input type="text" size="15" maxlength="15" /></p>
+    <p><label>密码</label><input type="password" size="15" maxlength="15" /></p>
+    <div id="larger">大</div>
+    <div id="medium">中</div>
+    <div id="smaller">上</div>
+</body>
+</html>
